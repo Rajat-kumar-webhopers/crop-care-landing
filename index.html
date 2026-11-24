@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  
+  
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Montserrat:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+    
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+  
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .presence-scroll { scrollbar-width: thin; scrollbar-color: #00673b #dfebe6; }
+.presence-scroll::-webkit-scrollbar { display: block; width: 6px; }
+.presence-scroll::-webkit-scrollbar-track { background: #dfebe6; border-radius: 9999px; }
+.presence-scroll::-webkit-scrollbar-thumb { background: #00673b; border-radius: 9999px; }
+
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+ <script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"inverse-on-surface": "#e8f3ee", "error": "#ba1a1a", "harvest-amber": "#D97706", "tertiary": "#834c00", "on-error-container": "#93000a", "on-secondary-fixed": "#001b3f", "surface-container-high": "#dfebe6", "outline-variant": "#bdcabe", "on-primary-fixed": "#00210f", "primary": "#00673b", "secondary": "#475e89", "primary-fixed-dim": "#73db9b", "sunshine-gold": "#F59E0B", "error-container": "#ffdad6", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#ffb870", "on-primary": "#ffffff", "primary-fixed": "#8ff8b5", "on-tertiary-fixed-variant": "#693c00", "surface-bright": "#f1fcf7", "on-surface-variant": "#3e4a40", "surface-container-low": "#ebf6f1", "on-background": "#141e1b", "outline": "#6e7a70", "tertiary-container": "#a66100", "secondary-fixed-dim": "#afc7f8", "surface-container-lowest": "#ffffff", "surface-cream": "#F8F6F0", "on-tertiary-container": "#fff6f1", "inverse-surface": "#28332f", "surface-container-highest": "#dae5e0", "on-primary-fixed-variant": "#00522e", "on-primary-container": "#e4ffe8", "surface-container": "#e5f0eb", "border-subtle": "#E2E8F0", "on-error": "#ffffff", "surface-tint": "#F1EEE6", "surface-variant": "#dae5e0", "background": "#f1fcf7", "primary-container": "#00834c", "on-surface": "#141e1b", "on-tertiary-fixed": "#2d1600", "surface-dim": "#d1ddd8", "surface": "#f1fcf7", "secondary-fixed": "#d7e2ff", "on-secondary-container": "#3f5681", "on-secondary-fixed-variant": "#2f4770", "tertiary-fixed": "#ffdcbe", "secondary-container": "#b5ccfe", "on-tertiary": "#ffffff", "inverse-primary": "#73db9b", "leaf-green": "#16A34A", "deep-forest": "#044B32", "navy": "#13294B"}, borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"}, spacing: {"margin-mobile": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "margin": "2rem", "space-xs": "0.25rem"}, fontFamily: {"body-sm": ["Montserrat", "sans-serif"], "body-md": ["Montserrat", "sans-serif"], "body-lg": ["Montserrat", "sans-serif"], "display-lg": ["Fraunces", "serif"], "display-lg-mobile": ["Fraunces", "serif"], "headline-xl": ["Fraunces", "serif"], "headline-xl-mobile": ["Fraunces", "serif"], "headline-lg": ["Fraunces", "serif"], "headline-md": ["Fraunces", "serif"], "headline-sm": ["Fraunces", "serif"], "title-md": ["Poppins", "sans-serif"], "label-lg": ["Poppins", "sans-serif"], "label-md": ["Poppins", "sans-serif"], "label-sm": ["Poppins", "sans-serif"]}, fontSize: {"body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}], "title-md": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "headline-xl-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]}}}};</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header class="fixed top-0 left-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="bg-deep-forest text-on-primary font-label-sm text-label-sm py-3">
+      <div class="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-6 flex-wrap"><span class="flex items-center gap-1.5"><span
+              class="material-symbols-outlined text-[15px] text-primary-fixed">call</span><a
+              class="hover:text-primary-fixed transition-colors" href="tel:01762280012">01762280012</a></span><span
+            class="flex items-center gap-1.5"><span
+              class="material-symbols-outlined text-[15px] text-primary-fixed">mail</span><a
+              class="hover:text-primary-fixed transition-colors"
+              href="mailto:info@cropcare.co.in">info@cropcare.co.in</a></span></div>
+        <div class="flex items-center gap-3"><span class="hidden sm:inline text-surface-container-high">Plant &amp;
+            R&amp;D Center</span>
+          <!-- <div class="flex items-center gap-2 text-on-primary"><a aria-label="Corporate Link"
+              class="hover:text-primary-fixed transition-colors" href="#"><span
+                class="material-symbols-outlined text-[16px]">language</span></a><a
+              aria-label="Corporate Certifications" class="hover:text-primary-fixed transition-colors" href="#"><span
+                class="material-symbols-outlined text-[16px]">verified</span></a></div> -->
+        </div>
+      </div>
+    </div>
+    <div class="h-24 lg:h-32 bg-surface-container-lowest/90 backdrop-blur-xl flex items-center">
+      <div class="w-full max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3 shrink-0"><img
+            alt="Image from https://cropcare.co.in/wp-content/uploads/2022/03/logowp-150x158.png"
+            class="h-16 sm:h-20 lg:h-28 w-auto object-contain"
+            src="https://cropcare.co.in/wp-content/uploads/2022/03/logowp-150x158.png" />
+          <!-- <div class="flex flex-col"><span
+              class="font-title-md text-title-md text-neutral-900 font-bold tracking-tight leading-none">Crop
+              Care</span><span
+              class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Pesticides
+              India</span></div> -->
+        </div>
+        <nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary font-title-md font-bold">
+  <a aria-current="page" class="transition-colors text-primary font-['Fraunces',serif] text-label-lg font-bold" data-path="home" href="#">Home</a>
+  <a class="font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a>
+
+  <!-- Products Dropdown -->
+  <div class="relative" id="products-menu">
+    <button type="button" id="products-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="products-panel" class="inline-flex items-center gap-1 font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors">
+      Products
+      <span id="products-chevron" class="material-symbols-outlined text-[18px] transition-transform duration-200">expand_more</span>
+    </button>
+    <div id="products-panel" role="menu" class="hidden absolute left-0 top-full mt-4 w-72 bg-surface-container-lowest rounded-xl border border-border-subtle shadow-xl p-2 z-50">
+      <a role="menuitem" href="#" data-path="insecticides" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-primary">bug_report</span>
+        <span><span class="block font-['Fraunces',serif] text-label-lg text-deep-forest">Insecticides</span><span class="block font-body-sm text-body-sm text-on-surface-variant">EC, SC &amp; WP formulations</span></span>
+      </a>
+      <a role="menuitem" href="#" data-path="herbicides" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-primary">grass</span>
+        <span><span class="block font-['Fraunces',serif] text-label-lg text-deep-forest">Herbicides</span><span class="block font-body-sm text-body-sm text-on-surface-variant">Selective &amp; non-selective</span></span>
+      </a>
+      <a role="menuitem" href="#" data-path="fungicides" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-primary">eco</span>
+        <span><span class="block font-['Fraunces',serif] text-label-lg text-deep-forest">Fungicides</span><span class="block font-body-sm text-body-sm text-on-surface-variant">Systemic &amp; contact</span></span>
+      </a>
+      <a role="menuitem" href="#" data-path="plant-growth-regulators" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined text-[20px] text-primary">psychiatry</span>
+        <span><span class="block font-['Fraunces',serif] text-label-lg text-deep-forest">Plant Growth Regulators</span><span class="block font-body-sm text-body-sm text-on-surface-variant">Bio-stimulants &amp; PGR</span></span>
+      </a>
+    </div>
+  </div>
+
+  <a class="font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-story" href="#">Our Story</a>
+  <a class="font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="why-choose-us" href="#">Why Choose Us</a>
+  <a class="font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="careers" href="#">Careers</a>
+  <a class="font-['Fraunces',serif] text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-us" href="#">Contact Us</a>
+</nav>
+        <div class="flex items-center gap-4 shrink-0"><a
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors"
+            data-path="contact-us" href="#">Enquire Now</a>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-36 lg:pt-40 bg-surface">
+    <div class="flex flex-col w-full">
+      <!-- Top Full-Bleed Interactive Hero Slider Section -->
+      <section class="relative w-full overflow-hidden -mt-36 pt-36 lg:-mt-40 lg:pt-40 bg-navy text-on-primary">
+        <!-- Background Slides Container -->
+        <div class="relative w-full min-h-[680px] lg:min-h-[780px] flex items-center" id="hero-slider-track">
+          <!-- Slide 1: Farmer & Field (Active) -->
+          <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 z-10 flex items-center"
+            id="slide-1">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+              data-alt="Panoramic high resolution photo of an Indian farmer in safety suit carefully spraying organic pesticide in lush green emerald vegetable farm during sunrise with warm golden rays illuminated mist"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKTbU4f7jAwa2sZfmz1Oga0WAsYsf6UEkXA5gMtu7mv5M-xCKmruE9qCT9kLy7Qg7szJBoxzPjEEJyJ1dQgm5p2qMx-6yahYxobkx4yt5rc3fSRHP-gNF5PsuYJMFDOGasNsUhPaCr32Bu7iZczxqL4T0GlpGsq8_iufm9Qm7f6dEnhPNijaUlIdUWnN4FzPganbNqB83-oLPW-e74ybghEMt1ZwkURDA-adrTUOE')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full">
+              <div class="max-w-2xl space-y-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/40 backdrop-blur-md text-primary-fixed border-none">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">CIB&amp;RC Approved • 35+
+                    Years Legacy</span>
+                </div>
+                <h1 class="font-display-lg text-display-lg text-on-primary tracking-tight font-extrabold leading-tight">
+                  Empowering Indian Agriculture with Advanced Crop Protection Since 1989
+                </h1>
+                <p class="font-body-lg text-body-lg text-inverse-on-surface leading-relaxed font-normal">
+                  Manufacturer of high-grade agrochemicals, insecticides, selective herbicides, and systemic fungicides
+                  engineered for soil resilience, superior crop health, and unmatched harvest yields.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                  <a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-leaf-green to-primary text-on-primary font-label-lg text-label-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5"
+                    href="#products-showcase">
+                    <span>Explore Formulations</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                  </a>
+                  <a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-on-primary font-label-lg text-label-lg hover:bg-surface-container-lowest/25 transition-all"
+                    href="#about-overview">
+                    <span class="material-symbols-outlined text-[20px]">business</span>
+                    <span>Company Profile</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2: R&D & Derabassi Facility -->
+          <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-0 flex items-center pointer-events-none"
+            id="slide-2">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+              data-alt="High-tech modern agrochemical formulation lab and automated chemical packaging line in Punjab India with scientists examining crop protection solutions"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeeKiljshgnlqDOoao3LypIkcMHxiOJjjjpGthUH1OGjMWgaXVeBR-9QkMt7H2LsLehKmiyeoAzDJjO4iQBI1NFJSUy4MNGTkvlkz2YfeeXZPchjjVk_hNDoJVt2M1jnGSn2T-7n-DZIynmP6I6tguDamhTIDE-d_aC7t5BjiJ3LraScv16PcpzfsAmox_MpC8D0f56f-FxnP-rydWfV0TQSGehfUQTmGry4EhlOQ')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full">
+              <div class="max-w-2xl space-y-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sunshine-gold/30 backdrop-blur-md text-sunshine-gold">
+                  <span class="material-symbols-outlined text-[18px]">factory</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Derabassi, SAS Nagar
+                    (Mohali), Punjab</span>
+                </div>
+                <h2 class="font-display-lg text-display-lg text-on-primary tracking-tight font-extrabold leading-tight">
+                  State-of-the-Art Dual Agrochemical Manufacturing Facilities
+                </h2>
+                <p class="font-body-lg text-body-lg text-inverse-on-surface leading-relaxed font-normal">
+                  Expanded industrial formulation hub at Focal Point &amp; Village Nimbuan meeting massive domestic and
+                  international agricultural supply requirements.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                  <a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-sunshine-gold text-on-tertiary-fixed font-label-lg text-label-lg font-bold shadow-lg hover:bg-harvest-amber transition-all"
+                    href="#story-timeline">
+                    <span>View Infrastructure</span>
+                    <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+                  </a>
+                  <a class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md text-on-primary font-label-lg text-label-lg hover:bg-surface-container-lowest/25 transition-all"
+                    href="tel:01762280012">
+                    <span class="material-symbols-outlined text-[20px]">call</span>
+                    <span>Call Plant: 01762 280012</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3: Certifications & Eco-Balance -->
+          <div
+            class="absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 z-0 flex items-center pointer-events-none"
+            id="slide-3">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+              data-alt="Expansive vibrant golden wheat field and healthy paddy terrace in Punjab bathed in golden hour sunshine under clear blue sky"
+              style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtg_TCbtALQZYwD4RC--FwUst6PywrBol5_JT9AyDwXaMzxWVW4USxoe1frU8R51I2NkJkVHyj-FqOQhyib8ueBba5MdFvDFqKzlMcBUVpUWCjPkIteHqkqIKVV1ZEz9S7TLjz-0BZ9hIg328kXxRVBln__kgkZCvCMeie7SUOPPzdAeBsQzOGfnHTlZM9l0aGUZsrt7V9dy1Eq7lfaxnOkp0kK4iTOs7Qnv7Cu8o')">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-transparent"></div>
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 w-full">
+              <div class="max-w-2xl space-y-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-leaf-green/40 backdrop-blur-md text-primary-fixed">
+                  <span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">ISO 9001:2015 &amp; ISO
+                    14001:2015</span>
+                </div>
+                <h2 class="font-display-lg text-display-lg text-on-primary tracking-tight font-extrabold leading-tight">
+                  Govt. Approved Formulations Safeguarding Farmer Wellbeing
+                </h2>
+                <p class="font-body-lg text-body-lg text-inverse-on-surface leading-relaxed font-normal">
+                  Strict quality surveillance, batch analytics, and eco-compatible formulations engineered for food
+                  security and balanced agrarian ecosystems.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                  <a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-leaf-green text-on-primary font-label-lg text-label-lg font-bold shadow-lg hover:shadow-xl transition-all"
+                    href="#distributor-inquiry">
+                    <span>Partner With Crop Care</span>
+                    <span class="material-symbols-outlined text-[20px]">handshake</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Slide Navigation Controls -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 pb-8 flex items-center justify-between z-20 relative">
+          <div class="flex items-center gap-3">
+            <button aria-label="Go to slide 1" class="w-10 h-2.5 rounded-full bg-sunshine-gold transition-all"
+              id="slider-dot-0" onclick="setHeroSlide(0)"></button>
+            <button aria-label="Go to slide 2"
+              class="w-3 h-2.5 rounded-full bg-surface-container-high/40 hover:bg-surface-container-high transition-all"
+              id="slider-dot-1" onclick="setHeroSlide(1)"></button>
+            <button aria-label="Go to slide 3"
+              class="w-3 h-2.5 rounded-full bg-surface-container-high/40 hover:bg-surface-container-high transition-all"
+              id="slider-dot-2" onclick="setHeroSlide(2)"></button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button aria-label="Previous Slide"
+              class="w-10 h-10 rounded-full bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 flex items-center justify-center text-on-primary transition-all backdrop-blur-sm"
+              onclick="prevHeroSlide()">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button aria-label="Next Slide"
+              class="w-10 h-10 rounded-full bg-surface-container-lowest/20 hover:bg-surface-container-lowest/30 flex items-center justify-center text-on-primary transition-all backdrop-blur-sm"
+              onclick="nextHeroSlide()">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <!-- Advance Agro Life Inspired Floating Credential Strip -->
+        <div class="relative w-full bg-surface-container-lowest text-on-surface py-6 shadow-md z-20">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center">
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">health_and_safety</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">
+                    Safeguarding</p>
+                  <p class="font-title-md text-title-md font-bold text-neutral-900 truncate">Farmer Wellbeing</p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-harvest-amber/15 text-harvest-amber flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">public</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">
+                    Supporting</p>
+                  <p class="font-title-md text-title-md font-bold text-neutral-900 truncate">Global Agronomy</p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">history_edu</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Est.
+                    1989</p>
+                  <p class="font-title-md text-title-md font-bold text-neutral-900 truncate">35+ Years Legacy</p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">rule</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">
+                    Surveillance</p>
+                  <p class="font-title-md text-title-md font-bold text-neutral-900 truncate">Persistent Compliance</p>
+                </div>
+              </div>
+              <div
+                class="col-span-2 md:col-span-1 flex items-center gap-3 p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+                <div
+                  class="w-11 h-11 shrink-0 rounded-full bg-leaf-green/15 text-leaf-green flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[24px]">eco</span>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">
+                    Developing</p>
+                  <p class="font-title-md text-title-md font-bold text-neutral-900 truncate">Better Ecosystem</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Us Split Section with Dual Cards & Counters -->
+      <section class="py-20 lg:py-28 bg-surface-cream text-on-surface" id="about-overview">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Header -->
+          <div class="max-w-3xl mb-16">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary mb-3">
+              <span class="material-symbols-outlined text-[16px]">domain</span>
+              <span class="font-label-md text-label-md uppercase font-bold tracking-wider">About Crop Care Pesticides
+                India</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl text-neutral-900 font-bold tracking-tight">
+              Pioneering High-Efficacy Formulations for Three and a Half Decades
+            </h2>
+          </div>
+          <!-- Bento Split Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Left Visual Editorial Card -->
+            <div
+              class="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-md flex flex-col justify-end min-h-[460px] p-8 text-on-primary">
+              <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+                data-alt="Two experienced agronomists and Indian farmers examining healthy green chili pepper plants in agricultural farm field with sun rays"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALzEPm7kWQM8X7iuAHyOvRUI6ymwK4upUaAdyYgXl9-wYy0G_fOh-QRoPxlFazzqt2WoYr5_NE-g-N8cJemEdf9z5zLKz-p0kjk4-vwXShjYjH4sBsvsyc9iKZw9F_zjYMPm0cBTd9EICsXUkkzLQPREx0NiYcqcH7wyoPkKSzLiATeE5fRSpYFo85awFY20OEtJpIhcR24WMaH0zkKW7TvveQxDA52yn0KicJ94Q')">
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-deep-forest via-deep-forest/50 to-transparent"></div>
+              <div class="relative z-10 space-y-4">
+                <span
+                  class="inline-block px-3 py-1 rounded-md bg-sunshine-gold text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                  From Murthal to Derabassi
+                </span>
+                <h3 class="font-headline-lg text-headline-lg font-bold leading-tight">
+                  A Sturdy Foundation Built On Farmer Trust &amp; B2B Excellence
+                </h3>
+                <p class="font-body-sm text-body-sm text-surface-container-high leading-relaxed">
+                  Originated with the Registrar of Companies Delhi in 1989. Today powered by dual ultra-modern
+                  manufacturing units located in Punjab.
+                </p>
+              </div>
+            </div>
+            <!-- Right Content & Verified Specs Card -->
+            <div class="lg:col-span-7 flex flex-col justify-between gap-6">
+              <div class="p-8 lg:p-10 rounded-2xl bg-surface-container-lowest shadow-sm space-y-6">
+                <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                  <span class="font-bold text-primary">Crop Care Pesticides (India) Pvt. Ltd.</span> was incorporated in
+                  the year <strong>1989</strong> with registrar of company Delhi, to Manufacture agro chemicals. Our
+                  sole objective of the organization at that time was to cater to our esteemed B2B clientele.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Our original plant was situated in Murthal, Sonipat, which later on moved to Derabassi, Punjab. Now we
+                  have added an additional state-of-the-art manufacturing facility in Derabassi, Punjab to address
+                  rising demands — both National and Inter-National. We are proud of our strong B2B presence in the
+                  agrochemical industry.
+                </p>
+                <div
+                  class="p-4 rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-[32px] text-primary">verified_user</span>
+                    <div>
+                      <h4 class="font-title-md text-title-md font-bold text-on-surface">Registered &amp; Certified</h4>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">ISO 9001:2015 Quality &amp; ISO
+                        14001:2015 Environmental System</p>
+                    </div>
+                  </div>
+                  <a class="shrink-0 px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-deep-forest transition-colors"
+                    href="#story-timeline">
+                    Our Full Story
+                  </a>
+                </div>
+              </div>
+              <!-- 4 Quantitative Metrics in Grid -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="p-5 rounded-xl bg-surface-container-lowest text-center shadow-sm">
+                  <p class="font-display-lg text-[32px] font-extrabold text-neutral-900 leading-tight">35+</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold uppercase">Years In
+                    Business</p>
+                </div>
+                <div class="p-5 rounded-xl bg-surface-container-lowest text-center shadow-sm">
+                  <p class="font-display-lg text-[32px] font-extrabold text-harvest-amber leading-tight">2</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold uppercase">Punjab
+                    Plants</p>
+                </div>
+                <div class="p-5 rounded-xl bg-surface-container-lowest text-center shadow-sm">
+                  <p class="font-display-lg text-[32px] font-extrabold text-neutral-900 leading-tight">100+</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold uppercase">
+                    Formulations</p>
+                </div>
+                <div class="p-5 rounded-xl bg-surface-container-lowest text-center shadow-sm">
+                  <p class="font-display-lg text-[32px] font-extrabold text-secondary leading-tight">28</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold uppercase">States
+                    Reached</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Advance Agro Life Inspired Technical Segments Pill Bar -->
+      <section class="py-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center gap-5 hover:shadow-md transition-all">
+              <div
+                class="w-14 h-14 rounded-2xl bg-harvest-amber/15 text-harvest-amber flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[32px]">science</span>
+              </div>
+              <div>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">High
+                  Purity Grade</span>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-neutral-900">2,4-D SERIES</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Selective phenoxy herbicides for cereals
+                  and sugarcane crops</p>
+              </div>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center gap-5 hover:shadow-md transition-all">
+              <div
+                class="w-14 h-14 rounded-2xl bg-sunshine-gold/20 text-harvest-amber flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[32px]">biotech</span>
+              </div>
+              <div>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Micronized
+                  Defense</span>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-neutral-900">SULPHUR SEGMENT</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Dual-action contact fungicide with
+                  essential secondary plant nutrient</p>
+              </div>
+            </div>
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center gap-5 hover:shadow-md transition-all">
+              <div
+                class="w-14 h-14 rounded-2xl bg-leaf-green/15 text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[32px]">precision_manufacturing</span>
+              </div>
+              <div>
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Advanced
+                  Tech</span>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-neutral-900">EC, SC &amp; WP FORMULATIONS
+                </h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Engineered suspension concentrates and
+                  wettable powders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Complete Product Range Showcase (Arched Cards Inspired by Advance Agro Life) -->
+      <section class="py-20 lg:py-28 bg-surface" id="products-showcase">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Header with Filter Pills -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
+            <div class="max-w-2xl space-y-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary">
+                <span class="material-symbols-outlined text-[16px]">potted_plant</span>
+                <span class="font-label-md text-label-md uppercase font-bold tracking-wider">Crop Care Solutions</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl text-neutral-900 font-bold tracking-tight">
+                Our Agrochemical Product Line
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Crop Care Pesticides (India) Pvt. Ltd. provides its grower clients with highly trained and professional
+                field crop consultants to monitor crops on a regular basis by organizing R&amp;D programs time to time.
+              </p>
+            </div>
+            <!-- Filter Pill Chips -->
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                class="px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all"
+                id="btn-filter-all" onclick="filterProducts('all')">
+                All Products
+              </button>
+              <button
+                class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all"
+                id="btn-filter-insecticides" onclick="filterProducts('insecticides')">
+                Insecticides
+              </button>
+              <button
+                class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all"
+                id="btn-filter-herbicides" onclick="filterProducts('herbicides')">
+                Herbicides
+              </button>
+              <button
+                class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all"
+                id="btn-filter-fungicides" onclick="filterProducts('fungicides')">
+                Fungicides
+              </button>
+              <button
+                class="px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all"
+                id="btn-filter-pgr" onclick="filterProducts('pgr')">
+                Plant Growth Regulators
+              </button>
+            </div>
+          </div>
+          <!-- Product Cards Grid (Arched Arcs with Advance Agro Life Style) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="product-grid">
+            <!-- Product 1: Insecticides -->
+            <div
+              class="product-item rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group"
+              data-category="insecticides">
+              <!-- Arched Photo Container -->
+              <div class="p-4 bg-deep-forest text-on-primary">
+                <div class="relative w-full h-56 rounded-t-full overflow-hidden">
+                  <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Agricultural workers applying insecticide in organized rows with protective gear in cotton farm with high yield potential"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDcBFVTJrtGGp0p6Y7mQ6YGqcfj5ijRtczAdnzzoble8ZuNo37Oase6vNT7roiy6edRp5FjAsOm5Lmy3tbs-khnU58PZTSXOGVRuQI_Cz4XBvowfwICzexQIyr2mABgMypmtH1V4tw_gdUnL6ZOC5PMvglpI0ANZG7twHosr_aqtrRBGDMJ8-jAPkbbp7uxI8W4-Prfq6nk66EV7z4DAkcTvh5lLL6UTsMclF0SJlo')">
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-transparent to-transparent">
+                  </div>
+                  <span
+                    class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">
+                    EC / SC Formulations
+                  </span>
+                </div>
+                <div class="pt-4 flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">Insecticides</h3>
+                  <div
+                    class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">pest_control</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Targeted protection against bollworms, aphids, jassids, stem borers, and sucking pests across paddy,
+                  cotton, vegetables, and pulses.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Target Pests:</span>
+                    <span class="font-semibold text-deep-forest">Stem Borers, Aphids, Mites</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Primary Crops:</span>
+                    <span class="font-semibold text-deep-forest">Cotton, Paddy, Mustard</span>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a class="w-full py-2.5 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-deep-forest font-label-md text-label-md font-semibold text-center flex items-center justify-center gap-2 transition-colors"
+                    href="#">
+                    <span>View Formulations</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2: Herbicides -->
+            <div
+              class="product-item rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group"
+              data-category="herbicides">
+              <!-- Arched Photo Container -->
+              <div class="p-4 bg-primary text-on-primary">
+                <div class="relative w-full h-56 rounded-t-full overflow-hidden">
+                  <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Trained technician in full hazmat protective suit spraying selective herbicide across golden wheat crop field under sunny skies"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuCHrN5qdsRgT1R7yCAdIOT4mH1CvnKSD30FAmQcKrsREYiRWBD-cSzViEKThRHqFmpuxhP-g6TAgeYalDfYhU_45c2pzy1b3ZLpOPzsGP4BL8r5daXoYL5lqmlVK1_zaUGZ-cehVh9GLyHl7M1IbO_MtcHbRQSHQi38__CUNVm5IMVCVl3EJ8_hGSRzoq0SqyRK52b7eeiPhOM_1HK1mMCAESy3cceqFo3_hjwVI')">
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                  <span
+                    class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">
+                    Selective &amp; Non-Selective
+                  </span>
+                </div>
+                <div class="pt-4 flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">Herbicides</h3>
+                  <div
+                    class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">grass</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Precision weed control chemistry designed to eliminate broadleaf weeds, annual grasses, and sedges
+                  without causing phytotoxicity to crops.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Key Range:</span>
+                    <span class="font-semibold text-deep-forest">2,4-D Ethyl Ester, Pre-emergent</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Primary Crops:</span>
+                    <span class="font-semibold text-deep-forest">Wheat, Sugarcane, Tea</span>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a class="w-full py-2.5 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-deep-forest font-label-md text-label-md font-semibold text-center flex items-center justify-center gap-2 transition-colors"
+                    href="#">
+                    <span>View Formulations</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3: Fungicides -->
+            <div
+              class="product-item rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group"
+              data-category="fungicides">
+              <!-- Arched Photo Container -->
+              <div class="p-4 bg-deep-forest text-on-primary">
+                <div class="relative w-full h-56 rounded-t-full overflow-hidden">
+                  <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Macro close up of healthy tender seedling emerging from fertile dark rich soil with droplets of water shining brightly"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRj7gQhMfBKtnrLRs5Ztes5xES71ZsBy0jqwUS6Qqky4ybkw8_xaehH5foNBFAKYRfu-iULp6ky1sW356Q5_sGIV-1cH_lwOMTZtuttVD7fbPn2WrAmwX0M76WAj2yy6RMjFR6ZMOej1vcn97WNuqMIPvwCbdwiHQfTP4ibJ2MOxsAhBd3rygGQNKJtqBV4yXI_-tciEMWS1340VL3V7PyFUIPJ4R9AZY60-yqs18')">
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-transparent to-transparent">
+                  </div>
+                  <span
+                    class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold">
+                    Systemic &amp; Contact
+                  </span>
+                </div>
+                <div class="pt-4 flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">Fungicides</h3>
+                  <div
+                    class="w-9 h-9 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">psychiatry</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Broad-spectrum pathogen prevention inhibiting blast, powdery mildew, sheath blight, and root rot in
+                  fruits, vegetables, and cash crops.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Protection:</span>
+                    <span class="font-semibold text-deep-forest">Blight, Mildew, Rust</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Primary Crops:</span>
+                    <span class="font-semibold text-deep-forest">Paddy, Tomato, Potato, Apple</span>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a class="w-full py-2.5 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-deep-forest font-label-md text-label-md font-semibold text-center flex items-center justify-center gap-2 transition-colors"
+                    href="#">
+                    <span>View Formulations</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4: Plant Growth Regulators (PGR) -->
+            <div
+              class="product-item rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group"
+              data-category="pgr">
+              <!-- Arched Photo Container -->
+              <div class="p-4 bg-tertiary-container text-on-tertiary-container">
+                <div class="relative w-full h-56 rounded-t-full overflow-hidden">
+                  <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Indian farmer standing in lush green sugarcane field holding nutrient spray equipment with bright sunshine"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQL6A3dvn1Pw3tclQWccsNMaSEQKTHIYAbR6ITxvMX5SBo4dzJqF_j1nh7i4dNRrJPS-RUEivZP2n-NtLs7qnP_KfIyvNd-Z_uVBU51-N9CRMDCVzuF5ziCU13TTRbdq9rFh17inzi9bm-Vn7svgUlXT43lkvE4dTZy7zZ_VV5v053EOw5KrvaCy9Fhul95BI-ZGDwLxz8pZWmDDLcuOGMTVnJFMGOJdQstJQcmf8')">
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-tertiary-container/80 via-transparent to-transparent">
+                  </div>
+                  <span
+                    class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-harvest-amber font-label-sm text-label-sm font-bold">
+                    Bio-Stimulants &amp; PGR
+                  </span>
+                </div>
+                <div class="pt-4 flex items-center justify-between">
+                  <h3 class="font-headline-sm text-headline-sm font-bold text-on-tertiary-container">Plant Growth</h3>
+                  <div
+                    class="w-9 h-9 rounded-full bg-surface-container-lowest text-harvest-amber flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[20px]">energy_savings_leaf</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Metabolic stimulators promoting root proliferation, vigorous vegetative flowering, uniform fruit
+                  setting, and abiotic stress resistance.
+                </p>
+                <div class="space-y-2 pt-2">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Formulations:</span>
+                    <span class="font-semibold text-deep-forest">Gibberellic Acid, Bio-enzymes</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                    <span>Primary Crops:</span>
+                    <span class="font-semibold text-deep-forest">Grapes, Cotton, Citrus, Chilies</span>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <a class="w-full py-2.5 rounded-full bg-surface-container hover:bg-harvest-amber hover:text-on-primary text-deep-forest font-label-md text-label-md font-semibold text-center flex items-center justify-center gap-2 transition-colors"
+                    href="#">
+                    <span>View Formulations</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Formulation Compatibility Indicator Table Strip -->
+          <div
+            class="mt-12 p-6 rounded-2xl bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[28px]">biotech</span>
+              </div>
+              <div>
+                <h4 class="font-title-md text-title-md font-bold text-neutral-900">Custom Formulation &amp; B2B Toll
+                  Manufacturing</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">We formulate liquid, granule, and powder
+                  grades according to exact client specs with full CIB&amp;RC dossier assistance.</p>
+              </div>
+            </div>
+            <a class="shrink-0 px-6 py-3 rounded-full bg-deep-forest text-on-primary font-label-md text-label-md font-bold hover:bg-primary transition-all"
+              href="#distributor-inquiry">
+              Request Technical Specs
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Our Story & Journey Timeline (1989 to Present) -->
+      <!-- Our Presence Section -->
+      <section class="py-20 lg:py-28 bg-surface-cream text-on-surface" id="our-presence">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary mb-3">
+                <span class="material-symbols-outlined text-[16px]">map</span>
+                <span class="font-label-md text-label-md uppercase font-bold tracking-wider">Our Presence</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl text-neutral-900 font-bold tracking-tight mb-4">
+                Serving Farmers Across India
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-xl">
+                Through our network of stations in 15 states, Crop Care delivers certified formulations and on-ground agronomy support to distributors and growers nationwide.
+              </p>
+              <div class="grid grid-cols-2 gap-4 mb-8 max-w-md">
+                <div class="bg-primary rounded-xl p-5 text-on-primary"><p class="font-headline-lg text-headline-lg">15</p><p class="font-label-md text-label-md">States Covered</p></div>
+                <div class="bg-deep-forest rounded-xl p-5 text-on-primary"><p class="font-headline-lg text-headline-lg">19</p><p class="font-label-md text-label-md">Stations</p></div>
+              </div>
+              <ul class="presence-scroll grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[340px] overflow-y-auto pr-2">
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Haryana</p><p class="font-body-sm text-body-sm text-on-surface-variant">Karnal, Hisar</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Rajasthan</p><p class="font-body-sm text-body-sm text-on-surface-variant">Jaipur</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Uttar Pradesh</p><p class="font-body-sm text-body-sm text-on-surface-variant">Ghaziabad, Lucknow</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Gujarat</p><p class="font-body-sm text-body-sm text-on-surface-variant">Aslali</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Madhya Pradesh</p><p class="font-body-sm text-body-sm text-on-surface-variant">Indore</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Chhattisgarh</p><p class="font-body-sm text-body-sm text-on-surface-variant">Raipur</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Bihar</p><p class="font-body-sm text-body-sm text-on-surface-variant">Patna</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">West Bengal</p><p class="font-body-sm text-body-sm text-on-surface-variant">Harpara, Siliguri</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Odisha</p><p class="font-body-sm text-body-sm text-on-surface-variant">Cuttack</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Maharashtra</p><p class="font-body-sm text-body-sm text-on-surface-variant">Akola, Pune</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Karnataka</p><p class="font-body-sm text-body-sm text-on-surface-variant">Ballari</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Telangana</p><p class="font-body-sm text-body-sm text-on-surface-variant">Hyderabad</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Andhra Pradesh</p><p class="font-body-sm text-body-sm text-on-surface-variant">Vijayawada</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Assam</p><p class="font-body-sm text-body-sm text-on-surface-variant">Boragaon</p></div>
+              </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                  <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">public</span>
+                  <div><p class="font-label-lg text-label-lg text-deep-forest">Nepal</p><p class="font-body-sm text-body-sm text-on-surface-variant">International Market</p></div>
+                </li>
+              <li class="flex items-start gap-3 bg-surface-container-lowest rounded-xl px-4 py-3 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">location_on</span>
+                <div><p class="font-label-lg text-label-lg text-deep-forest">Tamil Nadu</p><p class="font-body-sm text-body-sm text-on-surface-variant">Trichy</p></div>
+              </li>
+              </ul>
+            </div>
+            <div class="flex justify-center">
+              <img src="./images/crop-care-presence-map-new.svg" alt="Map of India showing Crop Care presence by state and station" class="w-full max-w-lg h-auto" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 lg:py-28 bg-deep-forest text-on-primary relative overflow-hidden" id="story-timeline">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <!-- Timeline Header -->
+          <div class="max-w-3xl mb-16 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed/20 text-primary-fixed">
+              <span class="material-symbols-outlined text-[16px]">timeline</span>
+              <span class="font-label-md text-label-md uppercase font-bold tracking-wider">Our Heritage</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl text-on-primary font-bold tracking-tight">
+              The Best Farming Products Since 1989
+            </h2>
+            <p class="font-body-lg text-body-lg text-inverse-on-surface leading-relaxed">
+              In the year 1994, Late Shri Ashok Barpujari led the company to a <strong class="text-sunshine-gold">sturdy
+                and exceptional position to address the ever-growing complexity of the challenges farmers face.</strong>
+              The company shifted and expanded to Derabassi, Distt. Mohali, Punjab to pioneer modern crop care.
+            </p>
+          </div>
+          <!-- Roadmap / Timeline Component -->
+          <div class="relative">
+            <!-- Connecting Line -->
+            <div
+              class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-surface-container-high/20 -translate-y-1/2">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+              <!-- Milestone 1 -->
+              <div
+                class="relative p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md hover:bg-surface-container-lowest/15 transition-all">
+                <span class="font-display-lg text-[28px] font-extrabold text-sunshine-gold">1989</span>
+                <div class="w-4 h-4 rounded-full bg-sunshine-gold my-3 hidden md:block"></div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-primary mt-2">Incorporation</h4>
+                <p class="font-body-sm text-body-sm text-inverse-on-surface mt-2">
+                  Incorporated with Registrar of Companies Delhi. Initial manufacturing plant established at Murthal,
+                  Sonipat for specialized B2B agrochemicals.
+                </p>
+              </div>
+              <!-- Milestone 2 -->
+              <div
+                class="relative p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md hover:bg-surface-container-lowest/15 transition-all">
+                <span class="font-display-lg text-[28px] font-extrabold text-primary-fixed">1994</span>
+                <div class="w-4 h-4 rounded-full bg-primary-fixed my-3 hidden md:block"></div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-primary mt-2">Visionary Guidance</h4>
+                <p class="font-body-sm text-body-sm text-inverse-on-surface mt-2">
+                  Late Shri Ashok Barpujari led strategic restructuring, steering CCPL toward scalable solutions for
+                  agrarian pests and disease complexes.
+                </p>
+              </div>
+              <!-- Milestone 3 -->
+              <div
+                class="relative p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md hover:bg-surface-container-lowest/15 transition-all">
+                <span class="font-display-lg text-[28px] font-extrabold text-sunshine-gold">2004</span>
+                <div class="w-4 h-4 rounded-full bg-sunshine-gold my-3 hidden md:block"></div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-primary mt-2">Unit 1 Derabassi</h4>
+                <p class="font-body-sm text-body-sm text-inverse-on-surface mt-2">
+                  Manufacturing shifted and expanded to Focal Point, Derabassi, Punjab with modernized liquid
+                  formulation and automated bottling capabilities.
+                </p>
+              </div>
+              <!-- Milestone 4 -->
+              <div
+                class="relative p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md hover:bg-surface-container-lowest/15 transition-all">
+                <span class="font-display-lg text-[28px] font-extrabold text-primary-fixed">2016</span>
+                <div class="w-4 h-4 rounded-full bg-primary-fixed my-3 hidden md:block"></div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-primary mt-2">Unit 2 Expansion</h4>
+                <p class="font-body-sm text-body-sm text-inverse-on-surface mt-2">
+                  Commissioned second high-capacity unit in Village Nimbuan, Tehsil Derabassi to serve surging National
+                  &amp; International agricultural demands.
+                </p>
+              </div>
+              <!-- Milestone 5 -->
+              <div
+                class="relative p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md hover:bg-surface-container-lowest/15 transition-all">
+                <span class="font-display-lg text-[28px] font-extrabold text-sunshine-gold">2025</span>
+                <div class="w-4 h-4 rounded-full bg-sunshine-gold my-3 hidden md:block"></div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-primary mt-2">Grower Advisory</h4>
+                <p class="font-body-sm text-body-sm text-inverse-on-surface mt-2">
+                  Direct field consultant network monitoring crop health across Punjab, Haryana, UP, and Rajasthan with
+                  regular farmer education programs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Mission, Vision & Core Values (Styled with Advance Agro Life Visual Contrast) -->
+      <section class="py-20 lg:py-28 bg-surface-cream text-on-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Title -->
+          <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="font-label-md text-label-md uppercase font-bold tracking-wider text-primary">Purpose &amp;
+              Principles</span>
+            <h2 class="font-headline-xl text-headline-xl font-bold text-neutral-900">Our Mission &amp; Vision</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Guided by thirty-five years of agrarian
+              dedication and uncompromising scientific integrity.</p>
+          </div>
+          <!-- Dual Mission & Vision Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Mission Card -->
+            <div
+              class="p-8 lg:p-10 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+              <div class="space-y-6">
+                <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[36px]">crisis_alert</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg font-bold text-neutral-900">Our Mission</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                  "To promote sustainable agricultural practices and provide farmers with cost-effective, high-efficacy
+                  agrochemical solutions that protect crops, elevate yield, and ensure long-term food security."
+                </p>
+              </div>
+              <div class="pt-6 flex items-center gap-2 text-primary font-label-md text-label-md font-semibold">
+                <span class="material-symbols-outlined text-[18px]">eco</span>
+                <span>Protecting crops, preserving earth</span>
+              </div>
+            </div>
+            <!-- Vision Card -->
+            <div
+              class="p-8 lg:p-10 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+              <div class="space-y-6">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-sunshine-gold/20 text-harvest-amber flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[36px]">lightbulb</span>
+                </div>
+                <h3 class="font-headline-lg text-headline-lg font-bold text-neutral-900">Our Vision</h3>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                  "To emerge as a trusted global agrochemical formulation leader renowned for research-driven purity,
+                  environmental stewardship, and the enrichment of farmers' livelihoods and quality of life."
+                </p>
+              </div>
+              <div class="pt-6 flex items-center gap-2 text-harvest-amber font-label-md text-label-md font-semibold">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+                <span>Worldwide acceptability &amp; excellence</span>
+              </div>
+            </div>
+          </div>
+          <!-- Core Values Grid (Advance Agro Life Style) -->
+          <div class="space-y-8">
+            <div class="text-center">
+              <h3 class="font-headline-md text-headline-md font-bold text-neutral-900 uppercase tracking-wider">Our Core
+                Values</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+              <div
+                class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm text-center space-y-4 hover:-translate-y-1 transition-all">
+                <div
+                  class="w-14 h-14 mx-auto rounded-full bg-deep-forest text-on-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">psychology</span>
+                </div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">EXPERT:</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Rigorous R&amp;D and evidence-based solutions are at the heart of our formulations.
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm text-center space-y-4 hover:-translate-y-1 transition-all">
+                <div
+                  class="w-14 h-14 mx-auto rounded-full bg-deep-forest text-on-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">trending_up</span>
+                </div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">IMPACTFUL:</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  We deliver long-lasting protection for farmers, their families, and farm yields.
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm text-center space-y-4 hover:-translate-y-1 transition-all">
+                <div
+                  class="w-14 h-14 mx-auto rounded-full bg-deep-forest text-on-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">rocket_launch</span>
+                </div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">BOLD:</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Investing courageously in next-generation crop science and compliant facilities.
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm text-center space-y-4 hover:-translate-y-1 transition-all">
+                <div
+                  class="w-14 h-14 mx-auto rounded-full bg-deep-forest text-on-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">handshake</span>
+                </div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">TRUST:</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Transparent, ethical communication with all B2B clients and rural cooperatives.
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm text-center space-y-4 hover:-translate-y-1 transition-all">
+                <div
+                  class="w-14 h-14 mx-auto rounded-full bg-deep-forest text-on-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">diversity_3</span>
+                </div>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">FARMER-FIRST:</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Every formulation is verified in Indian soil conditions for true agrarian prosperity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Crop Care Pesticides Section -->
+      <section class="py-20 lg:py-28 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Left Side: Content & Features -->
+            <div class="lg:col-span-7 space-y-8">
+              <div class="space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary">
+                  <span class="material-symbols-outlined text-[16px]">military_tech</span>
+                  <span class="font-label-md text-label-md uppercase font-bold tracking-wider">Unmatched
+                    Strengths</span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl text-neutral-900 font-bold tracking-tight">
+                  Why Agriculture Leaders &amp; B2B Clients Choose Crop Care
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Operating with dual plants in Derabassi, Punjab, we unite chemical purity, high batch consistency, and
+                  dedicated field crop consultants to ensure uncompromised agricultural protection.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-leaf-green/15 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">factory</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">2 Punjab Plants</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">High-capacity automated units at
+                      Focal Point and Nimbuan, Derabassi.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-harvest-amber/15 text-harvest-amber flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">support_agent</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">Field Consultants</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">On-ground crop consultants
+                      conducting R&amp;D advisory and crop monitoring.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-secondary-container/70 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">verified</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">CIB&amp;RC Compliance</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Stringent government testing and
+                      complete regulatory documentation.</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">all_inclusive</span>
+                  </div>
+                  <div>
+                    <h4 class="font-title-md text-title-md font-bold text-on-surface">Pan-India Logistics</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Rapid supply pipeline serving
+                      distributors across North, Central, and South India.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-4">
+                <a class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-deep-forest text-on-primary font-label-md text-label-md font-bold hover:bg-primary transition-colors"
+                  href="tel:01762280012">
+                  <span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+                  <span>Speak to Formulation Agronomist: 01762 280012</span>
+                </a>
+              </div>
+            </div>
+            <!-- Right Side: Dual Plant Info Bento -->
+            <div class="lg:col-span-5 space-y-6">
+              <div class="p-8 rounded-3xl bg-surface-container-low space-y-6">
+                <h3 class="font-headline-sm text-headline-sm font-bold text-neutral-900">Our Certified Manufacturing
+                  Units</h3>
+                <div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-md text-label-md font-bold text-primary uppercase">Manufacturing Unit
+                      1</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">Active</span>
+                  </div>
+                  <p class="font-title-md text-title-md font-bold text-on-surface">Derabassi Focal Point Facility</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Village Sadomajra, Haibatpur Road, Focal
+                    Point, Derabassi, Distt. Mohali, Punjab – 140507</p>
+                </div>
+                <div class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="font-label-md text-label-md font-bold text-harvest-amber uppercase">Formulation Unit
+                      2</span>
+                    <span
+                      class="px-2.5 py-0.5 rounded-full bg-harvest-amber/15 text-harvest-amber font-label-sm text-label-sm font-semibold">Expanded</span>
+                  </div>
+                  <p class="font-title-md text-title-md font-bold text-on-surface">Nimbuan Agrochemical Plant</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Village Nimbuan, PO Rampur Sainia, Tehsil
+                    Derabassi, Distt. Mohali, Punjab – 140507</p>
+                </div>
+                <div class="p-4 rounded-xl bg-primary/10 flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+                  <p class="font-label-sm text-label-sm text-deep-forest font-semibold">Dual units audited and verified
+                    under ISO 9001:2015 &amp; ISO 14001:2015 standards.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Farmer Testimonials & Ground Advisory Insights -->
+      <section class="py-20 lg:py-28 bg-surface-cream text-on-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+            <span class="font-label-md text-label-md uppercase font-bold tracking-wider text-primary">Voices from the
+              Field</span>
+            <h2 class="font-headline-xl text-headline-xl font-bold text-neutral-900">Grower Stories &amp; Harvest Impact
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">From Punjab wheat lands to Haryana vegetable
+              farms, see how our formulations safeguard crop yields.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Story 1 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center gap-1 text-sunshine-gold">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                  "We encountered severe sheath blight and stem borer attack in our paddy crop in Patiala. The Crop Care
+                  field consultant recommended their systemic fungicide regimen. Within 5 days the damage stopped, and
+                  we saved over 85% of our harvest."
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/20 text-neutral-900 flex items-center justify-center font-bold font-title-md">
+                  GS
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md font-bold text-on-surface">Gurpreet Singh</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Paddy &amp; Wheat Grower • Patiala,
+                    Punjab</p>
+                </div>
+              </div>
+            </div>
+            <!-- Story 2 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center gap-1 text-sunshine-gold">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                  "As a commercial chili and tomato cultivator in Karnal, managing thrips and mite vectors is vital.
+                  Crop Care insecticides gave prompt knock-down without leaf scorch. Their dosage guidance is
+                  exceptionally reliable."
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-harvest-amber/20 text-harvest-amber flex items-center justify-center font-bold font-title-md">
+                  RK
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md font-bold text-on-surface">Rajesh Kumar</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Vegetable Farmer • Karnal, Haryana</p>
+                </div>
+              </div>
+            </div>
+            <!-- Story 3 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center gap-1 text-sunshine-gold">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                  "We have distributed Crop Care formulations across North India for twelve straight years. Batch
+                  consistency from the Derabassi plants is 100% compliant with CIB&amp;RC requirements. High retailer
+                  satisfaction."
+                </p>
+              </div>
+              <div class="flex items-center gap-4 pt-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-leaf-green/20 text-neutral-900 flex items-center justify-center font-bold font-title-md">
+                  MS
+                </div>
+                <div>
+                  <p class="font-title-md text-title-md font-bold text-on-surface">Manish Sharma</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Agrochemical Distributor • Ambala,
+                    Haryana</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Advance Agro Life Inspired Blogs & Media Excerpt -->
+      <section class="py-16 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div>
+              <span class="font-label-md text-label-md uppercase font-bold tracking-wider text-primary">Agronomy
+                Updates</span>
+              <h3 class="font-headline-lg text-headline-lg font-bold text-neutral-900">Our Knowledge Articles</h3>
+            </div>
+            <a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-deep-forest transition-colors"
+              href="#">
+              <span>View All Articles</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+              class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span
+                  class="px-3 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">Crop
+                  Advisory</span>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">Integrated Pest Management for Cotton
+                  Season 2025</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Detailed steps on controlling pink bollworm
+                  using targeted insecticide rotation and field surveillance.</p>
+              </div>
+              <p class="font-label-sm text-label-sm text-primary font-bold pt-4">Read Complete Guide →</p>
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span
+                  class="px-3 py-1 rounded-full bg-harvest-amber/15 text-harvest-amber font-label-sm text-label-sm font-bold">Weed
+                  Science</span>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">Selective Herbicides in Wheat &amp;
+                  Paddy Rotations</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Preventing Phalaris minor and broadleaf
+                  resistance through precision 2,4-D dosage and soil moisture control.</p>
+              </div>
+              <p class="font-label-sm text-label-sm text-harvest-amber font-bold pt-4">Read Complete Guide →</p>
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <span
+                  class="px-3 py-1 rounded-full bg-secondary-container/70 text-secondary font-label-sm text-label-sm font-bold">R&amp;D
+                  Innovations</span>
+                <h4 class="font-title-md text-title-md font-bold text-on-surface">Dual Plant Modernization: Derabassi
+                  Unit 2 Scaling Up</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">How our expanded formulation plant in
+                  Village Nimbuan accelerates B2B agrochemical supplies nationwide.</p>
+              </div>
+              <p class="font-label-sm text-label-sm text-secondary font-bold pt-4">Read Complete Guide →</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Direct CTA & Distributor Inquiry Banner -->
+      <section class="py-20 bg-deep-forest text-on-primary relative overflow-hidden" id="distributor-inquiry">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div
+            class="bg-gradient-to-r from-primary via-primary-container to-deep-forest p-10 lg:p-16 rounded-3xl shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              <div class="lg:col-span-7 space-y-6">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-primary-fixed">
+                  <span class="material-symbols-outlined text-[18px]">handshake</span>
+                  <span class="font-label-md text-label-md uppercase font-bold tracking-wider">Distributor &amp;
+                    Institutional Tie-Ups</span>
+                </div>
+                <h2 class="font-headline-xl text-headline-xl font-bold tracking-tight text-on-primary">
+                  Partner with Crop Care Pesticides India
+                </h2>
+                <p class="font-body-lg text-body-lg text-inverse-on-surface leading-relaxed">
+                  Join our nationwide B2B network. We invite agrochemical dealers, agricultural cooperatives, and
+                  institutional distributors to access certified formulations with high margin stability and dedicated
+                  field support.
+                </p>
+                <div class="flex flex-wrap items-center gap-6 pt-2">
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-sunshine-gold text-[28px]">phone_in_talk</span>
+                    <div>
+                      <p class="font-label-sm text-label-sm text-surface-container-high uppercase">Direct Phone Support
+                      </p>
+                      <a class="font-headline-sm text-headline-sm font-bold text-on-primary hover:text-sunshine-gold transition-colors"
+                        href="tel:01762280012">01762 280012</a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary-fixed text-[28px]">mail</span>
+                    <div>
+                      <p class="font-label-sm text-label-sm text-surface-container-high uppercase">Email Inquiries</p>
+                      <a class="font-headline-sm text-headline-sm font-bold text-on-primary hover:text-primary-fixed transition-colors"
+                        href="mailto:info@cropcare.co.in">info@cropcare.co.in</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Quick Inquiry Form Card -->
+              <div class="lg:col-span-5 bg-surface-container-lowest text-on-surface p-8 rounded-2xl shadow-lg">
+                <h3 class="font-headline-sm text-headline-sm font-bold text-neutral-900 mb-2">Request Dealership / Specs
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Fill in details and our Derabassi
+                  corporate team will connect within 24 hours.</p>
+                <form class="space-y-4" onsubmit="handleInquirySubmit(event)">
+                  <div>
+                    <label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Full Name /
+                      Organization</label>
+                    <input
+                      class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container"
+                      placeholder="e.g. Ramesh Agro Agencies" required="" type="text" />
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Contact
+                        Phone</label>
+                      <input
+                        class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container"
+                        placeholder="Mobile number" required="" type="tel" />
+                    </div>
+                    <div>
+                      <label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">State /
+                        District</label>
+                      <input
+                        class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container"
+                        placeholder="Punjab / Haryana" required="" type="text" />
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block font-label-md text-label-md font-semibold text-on-surface mb-1">Segment of
+                      Interest</label>
+                    <select
+                      class="w-full px-4 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container">
+                      <option>Insecticides (EC / SC / WP)</option>
+                      <option>Herbicides &amp; Weedicides</option>
+                      <option>Fungicides &amp; Sulphur</option>
+                      <option>Plant Growth Regulators</option>
+                      <option>Bulk B2B Toll Manufacturing</option>
+                    </select>
+                  </div>
+                  <button
+                    class="w-full py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-deep-forest transition-colors"
+                    id="submit-inquiry-btn" type="submit">
+                    Send Distributor Inquiry
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive JavaScript Handling Slider and Filtering -->
+      <script>
+        let currentHeroIndex = 0;
+        const heroSlides = ['slide-1', 'slide-2', 'slide-3'];
+        let heroAutoInterval = null;
+
+        function setHeroSlide(index) {
+          heroSlides.forEach((slideId, idx) => {
+            const slideEl = document.getElementById(slideId);
+            const dotEl = document.getElementById('slider-dot-' + idx);
+            if (idx === index) {
+              slideEl.classList.remove('opacity-0', 'pointer-events-none');
+              slideEl.classList.add('opacity-100', 'z-10');
+              if (dotEl) {
+                dotEl.className = 'w-10 h-2.5 rounded-full bg-sunshine-gold transition-all';
+              }
+            } else {
+              slideEl.classList.remove('opacity-100', 'z-10');
+              slideEl.classList.add('opacity-0', 'pointer-events-none');
+              if (dotEl) {
+                dotEl.className = 'w-3 h-2.5 rounded-full bg-surface-container-high/40 hover:bg-surface-container-high transition-all';
+              }
+            }
+          });
+          currentHeroIndex = index;
+        }
+
+        function nextHeroSlide() {
+          const nextIndex = (currentHeroIndex + 1) % heroSlides.length;
+          setHeroSlide(nextIndex);
+        }
+
+        function prevHeroSlide() {
+          const prevIndex = (currentHeroIndex - 1 + heroSlides.length) % heroSlides.length;
+          setHeroSlide(prevIndex);
+        }
+
+        // Auto rotate slides every 7 seconds
+        heroAutoInterval = setInterval(nextHeroSlide, 7000);
+
+        // Product Category Filter
+        function filterProducts(category) {
+          const items = document.querySelectorAll('.product-item');
+          const filterBtns = ['all', 'insecticides', 'herbicides', 'fungicides', 'pgr'];
+
+          filterBtns.forEach(cat => {
+            const btn = document.getElementById('btn-filter-' + cat);
+            if (btn) {
+              if (cat === category) {
+                btn.className = 'px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all';
+              } else {
+                btn.className = 'px-5 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container font-label-md text-label-md font-semibold transition-all';
+              }
+            }
+          });
+
+          items.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            if (category === 'all' || itemCat === category) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+
+        // Quick Inquiry Toast microinteraction
+        function handleInquirySubmit(event) {
+          event.preventDefault();
+          const btn = document.getElementById('submit-inquiry-btn');
+          btn.innerText = 'Inquiry Submitted Successfully!';
+          btn.classList.remove('bg-primary');
+          btn.classList.add('bg-leaf-green');
+          setTimeout(() => {
+            btn.innerText = 'Send Distributor Inquiry';
+            btn.classList.add('bg-primary');
+            btn.classList.remove('bg-leaf-green');
+            event.target.reset();
+          }, 3500);
+        }
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-low text-on-surface pt-16 pb-12 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3"><img
+              alt="Image from https://cropcare.co.in/wp-content/uploads/2022/03/logowp-150x158.png"
+              class="h-20 w-auto object-contain"
+              src="https://cropcare.co.in/wp-content/uploads/2022/03/logowp-150x158.png" /><span
+              class="font-title-md text-title-md text-neutral-900 font-bold">Crop Care</span></div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">A premier agrochemical formulation enterprise
+            pioneering sustainable crop protection solutions, research-backed insecticides, and eco-balanced crop
+            nutrition across India.</p>
+          <div class="flex flex-wrap gap-2 pt-2"><span
+              class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">ISO
+              9001:2015</span><span
+              class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">CIB&amp;RC
+              Approved</span></div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-headline-sm text-headline-sm text-neutral-900 font-semibold">Manufacturing Units</h3>
+          <div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+            <div class="p-3 rounded-lg bg-surface-container-lowest">
+              <p class="font-label-lg text-label-lg font-bold text-primary">Unit 1 (Plant)</p>
+              <p>Plot No. 12-14, Industrial Focal Point, Derabassi, Distt. SAS Nagar (Mohali), Punjab - 140507</p>
+            </div>
+            <div class="p-3 rounded-lg bg-surface-container-lowest">
+              <p class="font-label-lg text-label-lg font-bold text-primary">Unit 2 (Formulations)</p>
+              <p>Saidpura Road, Barwala Highway, Derabassi, Distt. SAS Nagar (Mohali), Punjab - 140507</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-headline-sm text-headline-sm text-neutral-900 font-semibold">Product Portfolio</h3>
+          <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" data-path="insecticides" href="#">Agricultural
+                Insecticides</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="herbicides" href="#">Selective &amp; Broad
+                Herbicides</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="fungicides" href="#">Systemic &amp; Contact
+                Fungicides</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="crop-care-innovations" href="#">Plant Growth
+                Regulators (PGR)</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="crop-care-innovations"
+                href="#">Bio-Stimulants &amp; Micronutrients</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="safety-and-compliance" href="#">Dosage &amp;
+                Safety Guidelines</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-headline-sm text-headline-sm text-neutral-900 font-semibold">Quick Links &amp; Direct</h3>
+          <ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-primary transition-colors" data-path="our-story" href="#">Corporate Journey &amp;
+                Legacy</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="why-choose-us" href="#">Quality Testing &amp;
+                Labs</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="careers" href="#">Agronomist &amp; Sales
+                Careers</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="contact-us" href="#">Distributor Network
+                Enquiries</a></li>
+            <li><a class="hover:text-primary transition-colors" data-path="safety-and-compliance" href="#">Regulatory
+                Documentation</a></li>
+          </ul>
+          <div class="pt-2">
+            <p class="font-label-md text-label-md font-semibold text-on-surface">Toll-Free Helpline:</p>
+            <p class="font-headline-sm text-headline-sm text-neutral-900 font-bold">01762 280012</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="pt-8 mt-4 bg-surface-container-high/40 rounded-xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
+        <p>© 2025 Crop Care Pesticides India Pvt Ltd. All rights reserved.</p>
+        <div class="flex flex-wrap items-center gap-6"><a class="hover:text-primary transition-colors"
+            data-path="safety-and-compliance" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors"
+            data-path="safety-and-compliance" href="#">Terms of Agro Supply</a><a
+            class="hover:text-primary transition-colors" data-path="contact-us" href="#">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script>
+(function () {
+  var wrap = document.getElementById('products-menu');
+  var btn = document.getElementById('products-toggle');
+  var panel = document.getElementById('products-panel');
+  var chev = document.getElementById('products-chevron');
+  if (!wrap || !btn || !panel) return;
+
+  function setOpen(open) {
+    panel.classList.toggle('hidden', !open);
+    chev.classList.toggle('rotate-180', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    setOpen(panel.classList.contains('hidden'));
+  });
+  document.addEventListener('click', function (e) {
+    if (!wrap.contains(e.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { setOpen(false); btn.focus(); }
+  });
+  panel.addEventListener('click', function () { setOpen(false); });
+})();
+</script>
+
+</html>
